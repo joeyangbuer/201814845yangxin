@@ -39,13 +39,14 @@ class DicBuilder:
                     self.remains_word_occurrence[word] = self.all_word_occurrence[word]
         else:
             self.remains_word_occurrence = self.all_word_occurrence
-
+        '''
         with open("./data/all_word_occurrence.txt", "w") as f:
             for item in self.all_word_occurrence:
                 f.write(item+"\t"+str(self.all_word_occurrence[item])+"\n")
         with open("./data/remains_word_occurrence.txt", "w") as f:
             for item in self.remains_word_occurrence:
                 f.write(item+"\t"+str(self.remains_word_occurrence[item])+"\n")
+        '''
 
     '''
     build doc-word dic
@@ -66,15 +67,3 @@ class DicBuilder:
     def vectorize(self, doc_word_dic):
         doc_vectors = []
         for doc in doc_word_dic:
-            vector = []
-            for word in self.remains_word_occurrence:
-                if word not in doc_word_dic[doc]:
-                    tf = 0
-                else:
-                    tf = 1+math.log(doc_word_dic[doc][word], 10)
-
-                idf = math.log(self.doc_num / self.doc_freq[word], 10)
-                w = tf*idf
-                vector.append(w)
-            doc_vectors.append(vector)
-        return np.array(doc_vectors)
