@@ -1,4 +1,6 @@
-
+"""
+Use KNN to classify documents and count the accuracy
+"""
 from knn import KNN
 import numpy as np
 import pandas as pd
@@ -29,9 +31,9 @@ for i in range(len(test_labels)):
 
 result_file = open(r"D:\python project\data\result.csv", "a")
 writer = csv.writer(result_file)
-for i in range(30, 31):
+for i in range(1, 2):
     knn = KNN(i, train_vectors, train_labels)
-    acc = knn.scores(test_vectors, test_labels, False)
+    acc = knn.scores(test_vectors, test_labels, True)
     writer.writerow([i, acc])
     print("k = %d, accuracy = %f" % (i, acc))
 result_file.close()

@@ -31,8 +31,6 @@ def cosDis(vector1, vector2):
 print(cosDis(np.array([0,1,1]),np.array([0,0,1])))
 print(["2"]+["344444","sss"])'''
 
-key = ["a","b","c"]
-value = [0]*3
-#print(dict(zip(key,value)))
-for i in range(1,4):
-    print(i)
+
+a = np.array([[1,2,3], [4,2,1]])
+print(a.argmax(axis=1))

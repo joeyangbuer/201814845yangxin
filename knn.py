@@ -1,5 +1,5 @@
 """
-a KNN class to classify document by document vector
+Define a KNN class to classify document by document vector
 """
 import numpy as np
 from collections import Counter
