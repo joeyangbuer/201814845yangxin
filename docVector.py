@@ -39,10 +39,10 @@ def vectorize(doc_word_dic, remains_word_occurrence, idf_weight):
 
 
 start_time = time.time()
-print("--start reading train/test data path")
+print("--start reading train/test data_preprocess path")
 train_data_path, train_data_class = read_file(r"D:\python project\data\train.txt")
 test_data_path, test_data_class = read_file(r"D:\python project\data\test.txt")
-print("  end up reading train/test data path")
+print("  end up reading train/test data_preprocess path")
 
 print("--start building dic")
 train_dicBuilder = DicBuilder(train_data_path)

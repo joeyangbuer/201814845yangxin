@@ -90,6 +90,7 @@ def main():
         agglomerativeClustering(vectors, labels, linkage)
     print("--------------------------------------------")
     dbscan(vectors, labels, eps=0.3, min_samples=1)
+    print("--------------------------------------------")
     cov_types = ['spherical', 'diag', 'tied', 'full']
     for cov_type in cov_types:
         gaussianMixture(vectors, labels, cov_type)

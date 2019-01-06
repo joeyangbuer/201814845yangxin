@@ -14,7 +14,7 @@ test_ratio = 1-train_ratio
 train_data = []
 test_data = []
 
-print("start data segmentation, train data size : test data size = 8:2")
+print("start data_preprocess segmentation, train data_preprocess size : test data_preprocess size = 8:2")
 
 for class_name in os.listdir(docs_file):
     class_file = os.path.join(docs_file,  class_name)
@@ -29,7 +29,7 @@ for class_name in os.listdir(docs_file):
     for i in range(train_num, len(doc_list)):
         test_data.append((os.path.join(class_file, doc_list[i]), class_name))
 
-# shuffle the order of data
+# shuffle the order of data_preprocess
 random.shuffle(train_data)
 random.shuffle(test_data)
 
@@ -46,4 +46,4 @@ with open(test_file,"w") as f:
         f.write(item[0]+"\t"+item[1]+"\n")
         # f.write(item[0] + "\n")
 
-print("data segmentation end")
+print("data_preprocess segmentation end")

@@ -18,10 +18,10 @@ def read_file(file):
 
 
 read_time = time.time()
-print("--start reading train/test data path")
+print("--start reading train/test data_preprocess path")
 train_data_path, train_data_class = read_file(r"D:\python project\data\train.txt")
 test_data_path, test_data_class = read_file(r"D:\python project\data\test.txt")
-print("  end up reading train/test data path and the time cost is %fs" % (time.time() - read_time))
+print("  end up reading train/test data_preprocess path and the time cost is %fs" % (time.time() - read_time))
 
 build_time = time.time()
 print("--start building dic and word frequency statistics")
